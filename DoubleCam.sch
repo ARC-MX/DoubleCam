@@ -4,10 +4,10 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "Double Camera"
+Date "2020-12-28"
+Rev "V1.1"
+Comp "ARCW"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -77,7 +77,7 @@ U 1 1 5FBA3080
 P 1500 6150
 F 0 "U1" H 1500 6392 50  0000 C CNN
 F 1 "XC6206PxxxMR" H 1500 6301 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 1500 6375 50  0001 C CIN
+F 2 "Package_TO_SOT_SMD:SOT-89-3" H 1500 6375 50  0001 C CIN
 F 3 "https://www.torexsemi.com/file/xc6206/XC6206.pdf" H 1500 6150 50  0001 C CNN
 	1    1500 6150
 	1    0    0    -1  
@@ -161,7 +161,7 @@ U 1 1 5FBCBBDD
 P 1500 7000
 F 0 "U2" H 1500 7242 50  0000 C CNN
 F 1 "XC6206PxxxMR" H 1500 7151 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 1500 7225 50  0001 C CIN
+F 2 "Package_TO_SOT_SMD:SOT-89-3" H 1500 7225 50  0001 C CIN
 F 3 "https://www.torexsemi.com/file/xc6206/XC6206.pdf" H 1500 7000 50  0001 C CNN
 	1    1500 7000
 	1    0    0    -1  
@@ -182,13 +182,13 @@ Wire Wire Line
 $Comp
 L Connector_Generic_MountingPin:Conn_01x24_MountingPin J2
 U 1 1 5FBD3AD2
-P 4050 2050
-F 0 "J2" H 3972 3367 50  0000 C CNN
-F 1 "Conn_01x24_MountingPin" H 3972 3276 50  0000 C CNN
-F 2 "Connector_FFC-FPC:TE_2-1734839-4_1x24-1MP_P0.5mm_Horizontal" H 4050 2050 50  0001 C CNN
-F 3 "~" H 4050 2050 50  0001 C CNN
-	1    4050 2050
-	-1   0    0    -1  
+P 4050 2150
+F 0 "J2" H 3972 3467 50  0000 C CNN
+F 1 "Conn_01x24_MountingPin" H 3972 3376 50  0000 C CNN
+F 2 "Connector_FFC-FPC:TE_2-1734839-4_1x24-1MP_P0.5mm_Horizontal" H 4050 2150 50  0001 C CNN
+F 3 "~" H 4050 2150 50  0001 C CNN
+	1    4050 2150
+	-1   0    0    1   
 $EndComp
 NoConn ~ 4250 950 
 Wire Wire Line
@@ -249,8 +249,6 @@ Wire Wire Line
 	4750 2050 4250 2050
 Wire Wire Line
 	4250 1950 4750 1950
-Wire Wire Line
-	4250 1850 4750 1850
 Text Label 4750 2950 2    50   ~ 0
 OV2_D1
 Text Label 4750 3050 2    50   ~ 0
@@ -275,8 +273,6 @@ Text Label 4750 1850 2    50   ~ 0
 VCC1.5
 Text Label 4750 1950 2    50   ~ 0
 VCC2.8
-NoConn ~ 4250 3150
-NoConn ~ 4250 3250
 $Comp
 L power:+2V8 #PWR0105
 U 1 1 5FBF63A2
@@ -384,13 +380,13 @@ OV2_PWDN
 $Comp
 L Connector_Generic_MountingPin:Conn_01x24_MountingPin J1
 U 1 1 5FC15F44
-P 1200 2100
-F 0 "J1" H 1122 3417 50  0000 C CNN
-F 1 "Conn_01x24_MountingPin" H 1122 3326 50  0000 C CNN
-F 2 "Connector_FFC-FPC:TE_2-1734839-4_1x24-1MP_P0.5mm_Horizontal" H 1200 2100 50  0001 C CNN
-F 3 "~" H 1200 2100 50  0001 C CNN
-	1    1200 2100
-	-1   0    0    -1  
+P 1200 2200
+F 0 "J1" H 1122 3517 50  0000 C CNN
+F 1 "Conn_01x24_MountingPin" H 1122 3426 50  0000 C CNN
+F 2 "Connector_FFC-FPC:TE_2-1734839-4_1x24-1MP_P0.5mm_Horizontal" H 1200 2200 50  0001 C CNN
+F 3 "~" H 1200 2200 50  0001 C CNN
+	1    1200 2200
+	-1   0    0    1   
 $EndComp
 NoConn ~ 1400 1000
 Wire Wire Line
@@ -422,8 +418,6 @@ Wire Wire Line
 Wire Wire Line
 	1400 2400 1900 2400
 Wire Wire Line
-	1400 2300 1900 2300
-Wire Wire Line
 	1400 2200 1900 2200
 Wire Wire Line
 	1900 2900 1400 2900
@@ -437,8 +431,6 @@ Wire Wire Line
 	1900 2100 1400 2100
 Wire Wire Line
 	1400 2000 1900 2000
-Wire Wire Line
-	1400 1900 1900 1900
 Text Label 1900 3000 2    50   ~ 0
 OV1_D1
 Text Label 1900 3100 2    50   ~ 0
@@ -466,16 +458,14 @@ VCC2.8
 $Comp
 L power:GND #PWR0109
 U 1 1 5FC15F75
-P 1200 3500
-F 0 "#PWR0109" H 1200 3250 50  0001 C CNN
-F 1 "GND" H 1205 3327 50  0000 C CNN
-F 2 "" H 1200 3500 50  0001 C CNN
-F 3 "" H 1200 3500 50  0001 C CNN
-	1    1200 3500
-	1    0    0    -1  
+P 1200 800
+F 0 "#PWR0109" H 1200 550 50  0001 C CNN
+F 1 "GND" H 1205 627 50  0000 C CNN
+F 2 "" H 1200 800 50  0001 C CNN
+F 3 "" H 1200 800 50  0001 C CNN
+	1    1200 800 
+	-1   0    0    1   
 $EndComp
-NoConn ~ 1400 3200
-NoConn ~ 1400 3300
 $Comp
 L power:+2V8 #PWR0110
 U 1 1 5FC15F7D
@@ -580,19 +570,19 @@ Wire Wire Line
 	3350 1300 3350 850 
 Text Label 3350 850  3    50   ~ 0
 OV1_PWDN
-Text Label 8600 4000 0    50   ~ 0
+Text Label 10100 4300 2    50   ~ 0
 OV1_PWDN
-Text Label 8600 3900 0    50   ~ 0
+Text Label 10100 4400 2    50   ~ 0
 OV1_RESET
-Text Label 10000 4500 2    50   ~ 0
+Text Label 8700 3800 0    50   ~ 0
 OV1_D2
-Text Label 10000 4400 2    50   ~ 0
+Text Label 8700 3900 0    50   ~ 0
 OV1_D3
-Text Label 10000 4300 2    50   ~ 0
+Text Label 8700 4000 0    50   ~ 0
 OV1_D4
-Text Label 10000 4200 2    50   ~ 0
+Text Label 8700 4100 0    50   ~ 0
 OV1_D5
-Text Label 8600 4100 0    50   ~ 0
+Text Label 10100 4200 2    50   ~ 0
 OV1_D7
 $Comp
 L LED:TSAL4400 D1
@@ -630,13 +620,13 @@ $EndComp
 $Comp
 L power:GND #PWR0115
 U 1 1 5FCD598D
-P 4050 3450
-F 0 "#PWR0115" H 4050 3200 50  0001 C CNN
-F 1 "GND" H 4055 3277 50  0000 C CNN
-F 2 "" H 4050 3450 50  0001 C CNN
-F 3 "" H 4050 3450 50  0001 C CNN
-	1    4050 3450
-	1    0    0    -1  
+P 4050 750
+F 0 "#PWR0115" H 4050 500 50  0001 C CNN
+F 1 "GND" H 4055 577 50  0000 C CNN
+F 2 "" H 4050 750 50  0001 C CNN
+F 3 "" H 4050 750 50  0001 C CNN
+	1    4050 750 
+	-1   0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR0116
@@ -650,7 +640,7 @@ F 3 "" H 6950 1550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Oscillator:SG-3225CAN X1
+L DoubleCam-rescue:SG-3225CAN-Oscillator X1
 U 1 1 5FBABDB4
 P 8950 1750
 F 0 "X1" H 9294 1796 50  0000 L CNN
@@ -751,18 +741,7 @@ F 3 "" H 8950 1450 50  0001 C CNN
 	1    8950 1450
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+5V #PWR0121
-U 1 1 5FC78136
-P 10000 3700
-F 0 "#PWR0121" H 10000 3550 50  0001 C CNN
-F 1 "+5V" H 10015 3873 50  0000 C CNN
-F 2 "" H 10000 3700 50  0001 C CNN
-F 3 "" H 10000 3700 50  0001 C CNN
-	1    10000 3700
-	1    0    0    -1  
-$EndComp
-Text Label 8600 3800 0    50   ~ 0
+Text Label 10100 4500 2    50   ~ 0
 OV1_SDA
 Text Label 8600 5500 0    50   ~ 0
 GND
@@ -771,63 +750,57 @@ VCC3.3
 Text Label 8850 5600 0    50   ~ 0
 +3V3
 Wire Wire Line
-	9600 3700 10000 3700
-Wire Wire Line
 	9600 5600 10000 5600
 Wire Wire Line
 	9600 5500 10000 5500
-Text Label 10000 3800 2    50   ~ 0
+Text Label 8700 4500 0    50   ~ 0
 OV1_SCL
 Text Label 10000 5600 2    50   ~ 0
 VCC3.3
 Text Label 10000 5500 2    50   ~ 0
 GND
 Wire Wire Line
-	9600 4300 10000 4300
-Text Label 8600 3700 0    50   ~ 0
-GND
-Text Label 8600 4300 0    50   ~ 0
+	9100 4000 8700 4000
+Text Label 10100 4000 2    50   ~ 0
 OV1_PCLK
-Text Label 8600 4200 0    50   ~ 0
+Text Label 10100 4100 2    50   ~ 0
 OV1_D6
-Text Label 8600 4500 0    50   ~ 0
+Text Label 10100 3800 2    50   ~ 0
 OV1_D1
-Text Label 10000 3900 2    50   ~ 0
+Text Label 8700 4400 0    50   ~ 0
 OV1_VSYNC
-Text Label 10000 4000 2    50   ~ 0
+Text Label 8700 4300 0    50   ~ 0
 OV1_HREF
-Text Label 8600 4400 0    50   ~ 0
+Text Label 10100 3900 2    50   ~ 0
 OV1_D0
 Wire Wire Line
-	9600 4400 10000 4400
+	9100 3900 8700 3900
 Wire Wire Line
-	9600 4200 10000 4200
+	9100 4100 8700 4100
 Wire Wire Line
-	9600 4100 10000 4100
+	9100 4200 8700 4200
 Wire Wire Line
-	9600 4000 10000 4000
+	9100 4300 8700 4300
 Wire Wire Line
-	9600 3900 10000 3900
+	9100 4400 8700 4400
 Wire Wire Line
-	9600 3800 10000 3800
+	9100 4500 8700 4500
 Wire Wire Line
-	9100 3700 8600 3700
+	9600 4500 10100 4500
 Wire Wire Line
-	9100 3800 8600 3800
+	9600 4400 10100 4400
 Wire Wire Line
-	9100 3900 8600 3900
+	9600 4300 10100 4300
 Wire Wire Line
-	9100 4000 8600 4000
+	9600 4200 10100 4200
 Wire Wire Line
-	9100 4100 8600 4100
+	9600 4100 10100 4100
 Wire Wire Line
-	9100 4200 8600 4200
+	9600 4000 10100 4000
 Wire Wire Line
-	9100 4300 8600 4300
+	9600 3900 10100 3900
 Wire Wire Line
-	9100 4400 8600 4400
-Wire Wire Line
-	9100 4500 8600 4500
+	9600 3800 10100 3800
 Wire Wire Line
 	9100 5500 8600 5500
 Wire Wire Line
@@ -857,35 +830,35 @@ F 3 "~" H 9300 4600 50  0001 C CNN
 	1    9300 4600
 	1    0    0    -1  
 $EndComp
-Text Label 10000 4900 2    50   ~ 0
+Text Label 8700 5200 0    50   ~ 0
 OV2_PWDN
-Text Label 10000 4800 2    50   ~ 0
+Text Label 8700 5300 0    50   ~ 0
 OV2_RESET
-Text Label 8600 5400 0    50   ~ 0
+Text Label 10100 4700 2    50   ~ 0
 OV2_D2
-Text Label 8600 5300 0    50   ~ 0
+Text Label 10100 4800 2    50   ~ 0
 OV2_D3
-Text Label 8600 5200 0    50   ~ 0
+Text Label 10100 4900 2    50   ~ 0
 OV2_D4
-Text Label 8600 5100 0    50   ~ 0
+Text Label 10100 5000 2    50   ~ 0
 OV2_D5
-Text Label 10000 5000 2    50   ~ 0
+Text Label 8700 5100 0    50   ~ 0
 OV2_D7
-Text Label 10000 4700 2    50   ~ 0
+Text Label 8700 5400 0    50   ~ 0
 OV2_SDA
-Text Label 8600 4700 0    50   ~ 0
+Text Label 10100 5400 2    50   ~ 0
 OV2_SCL
-Text Label 10000 5200 2    50   ~ 0
+Text Label 8700 4900 0    50   ~ 0
 OV2_PCLK
-Text Label 10000 5100 2    50   ~ 0
+Text Label 8700 5000 0    50   ~ 0
 OV2_D6
-Text Label 10000 5400 2    50   ~ 0
+Text Label 8700 4700 0    50   ~ 0
 OV2_D1
-Text Label 8600 4800 0    50   ~ 0
+Text Label 10100 5300 2    50   ~ 0
 OV2_VSYNC
-Text Label 8600 4900 0    50   ~ 0
+Text Label 10100 5200 2    50   ~ 0
 OV2_HREF
-Text Label 10000 5300 2    50   ~ 0
+Text Label 8700 4800 0    50   ~ 0
 OV2_D0
 Wire Wire Line
 	9100 4600 8600 4600
@@ -895,42 +868,84 @@ Text Label 10000 4600 2    50   ~ 0
 GND
 Text Label 8600 4600 0    50   ~ 0
 GND
-Text Label 10000 4100 2    50   ~ 0
+Text Label 8700 4200 0    50   ~ 0
 OV1_XCLK
 Wire Wire Line
-	9600 4500 10000 4500
-Text Label 8600 5000 0    50   ~ 0
+	9100 3800 8700 3800
+Text Label 10100 5100 2    50   ~ 0
 OV2_XCLK
 Wire Wire Line
-	8600 4700 9100 4700
+	10100 5400 9600 5400
 Wire Wire Line
-	8600 4800 9100 4800
+	10100 5300 9600 5300
 Wire Wire Line
-	8600 4900 9100 4900
+	10100 5200 9600 5200
 Wire Wire Line
-	8600 5000 9100 5000
+	10100 5100 9600 5100
 Wire Wire Line
-	8600 5100 9100 5100
+	10100 5000 9600 5000
 Wire Wire Line
-	8600 5200 9100 5200
+	10100 4900 9600 4900
 Wire Wire Line
-	8600 5300 9100 5300
+	10100 4800 9600 4800
 Wire Wire Line
-	8600 5400 9100 5400
+	10100 4700 9600 4700
 Wire Wire Line
-	9600 4700 10000 4700
+	9100 5400 8700 5400
 Wire Wire Line
-	9600 4800 10000 4800
+	9100 5300 8700 5300
 Wire Wire Line
-	9600 4900 10000 4900
+	9100 5200 8700 5200
 Wire Wire Line
-	9600 5000 10000 5000
+	9100 5100 8700 5100
 Wire Wire Line
-	9600 5100 10000 5100
+	9100 5000 8700 5000
 Wire Wire Line
-	9600 5200 10000 5200
+	9100 4900 8700 4900
 Wire Wire Line
-	9600 5300 10000 5300
+	9100 4800 8700 4800
 Wire Wire Line
-	9600 5400 10000 5400
+	9100 4700 8700 4700
+$Comp
+L power:GND #PWR0121
+U 1 1 5FED90BC
+P 1900 3300
+F 0 "#PWR0121" H 1900 3050 50  0001 C CNN
+F 1 "GND" H 1905 3127 50  0000 C CNN
+F 2 "" H 1900 3300 50  0001 C CNN
+F 3 "" H 1900 3300 50  0001 C CNN
+	1    1900 3300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0122
+U 1 1 5FED957B
+P 4750 3250
+F 0 "#PWR0122" H 4750 3000 50  0001 C CNN
+F 1 "GND" H 4755 3077 50  0000 C CNN
+F 2 "" H 4750 3250 50  0001 C CNN
+F 3 "" H 4750 3250 50  0001 C CNN
+	1    4750 3250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4250 3250 4750 3250
+Wire Wire Line
+	1400 3300 1900 3300
+Wire Wire Line
+	1400 1900 1900 1900
+Wire Wire Line
+	1400 2300 1900 2300
+Wire Wire Line
+	4250 1850 4750 1850
+Wire Wire Line
+	1400 3200 1900 3200
+Wire Wire Line
+	4250 3150 4750 3150
+Text Label 4750 3150 2    50   ~ 0
+VCC2.8
+Text Label 1900 3200 2    50   ~ 0
+VCC2.8
+NoConn ~ 9600 3700
+NoConn ~ 9100 3700
 $EndSCHEMATC

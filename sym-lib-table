@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name DoubleCam-rescue)(type Legacy)(uri ${KIPRJMOD}/DoubleCam-rescue.lib)(options "")(descr ""))
+)
